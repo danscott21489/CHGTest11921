@@ -1,7 +1,8 @@
 Scenario Failed Login
-Given User navigates to http://saucedemo.com
-When User login in using "locked_out_user"
-And Password as "secret_sauce"
+Given User opens web browser
+And navigates to http://saucedemo.com
+When User enters "locked_out_user" into "Username" field
+And enters "secret_sauce" into "Password" field
 And the "Login" button is clicked
 Then the Login should fail
-And the message "Epic sadface: Sorry, this user has been locked out." should be thrown
+And the message "Epic sadface: Sorry, this user has been locked out." should be thrown on login screen
